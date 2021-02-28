@@ -105,7 +105,7 @@ file += writeAlunos()
 
 fs.writeFile('ontologia.ttl', file, function (err) {
     if (err) throw err;
-    console.log('Saved!');
+    console.log('Success!');
 });
 
 
