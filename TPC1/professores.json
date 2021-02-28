@@ -1,0 +1,32 @@
+{
+  "professores": [
+    {
+      "_id": "PF-603bdb79f7b0270e9911ccb7",
+      "nome": "José Carlos Ramalho",
+      "ensina": [
+        "PRC2021"
+      ]
+    },
+    {
+      "_id": "PF-603bdb79827859b1e5346893",
+      "nome": "José Francisco Creissac Freitas Campos",
+      "ensina": [
+        "SI2021"
+      ]
+    },
+    {
+      "_id": "PF-603bdb792383005f7f962c7a",
+      "nome": "José João Antunes Guimarães Dias Almeida",
+      "ensina": [
+        "SPLN2021"
+      ]
+    },
+    {
+      "_id": "PF-603bdb794bb5f54f1084e533",
+      "nome": "António Luís Pinto Ferreira Sousa",
+      "ensina": [
+        "LEI2021"
+      ]
+    }
+  ]
+}
