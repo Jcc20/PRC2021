@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3 Classes
+
+
+      if lista 
+        each a in lista
+          if(a.o.value.split('#')[1])
+            p #{a.p.value.split('#')[1]} : #{a.o.value.split('#')[1]}
+          else
+            p #{a.p.value.split('#')[1]} : #{a.o.value}  
+ 

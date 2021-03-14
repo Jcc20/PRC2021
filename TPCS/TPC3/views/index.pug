@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3 Repositórios
+
+
+      if lista
+       ol
+        each a in lista
+          li
+            a(href=`/${a.id}`) #{a.id}
+ 
