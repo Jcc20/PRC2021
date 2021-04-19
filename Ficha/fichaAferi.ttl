@@ -1,0 +1,555 @@
+@prefix : <http://www.di.uminho.pt/prc2021/fichaprc2021#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/prc2021/fichaprc2021#> .
+
+<http://www.di.uminho.pt/prc2021/fichaprc2021#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#arrenda
+:arrenda rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#arrendatario
+:arrendatario rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#entradas
+:entradas rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#fracao
+:fracao rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#lista
+:lista rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#propietario
+:propietario rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#proprietarioDe
+:proprietarioDe rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#data
+:data rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#email
+:email rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#estado
+:estado rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#fornecedor
+:fornecedor rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#mensalidade
+:mensalidade rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#mes
+:mes rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#pagou
+:pagou rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#permilagem
+:permilagem rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#telefone
+:telefone rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#tipoEntrada
+:tipoEntrada rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#tipoImovel
+:tipoImovel rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#valor
+:valor rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Arrendatario
+:Arrendatario rdf:type owl:Class ;
+              rdfs:subClassOf :Individuo .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Entrada
+:Entrada rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Fracao
+:Fracao rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Individuo
+:Individuo rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Livro
+:Livro rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Mapa
+:Mapa rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#PagamentosMes
+:PagamentosMes rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Proprietario
+:Proprietario rdf:type owl:Class ;
+              rdfs:subClassOf :Individuo .
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#Loja
+<http://www.di.uminho.pt/prc2021/fichaprc2021#Loja> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "50" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "6.06" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Esq> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "34" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "51.63" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Esq> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "34" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "51.63" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#4º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#4º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Esq> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "34" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "51.63" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#6º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#6º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Esq> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "34" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "51.63" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#8º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#8º_Dto> rdf:type owl:NamedIndividual,
+        :Fracao ;
+    :permilagem "24" ;
+    :proprietario :idA;
+    :estado "alugado";
+    :tipoImovel "Loja";
+    :mensalidade "36.45" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP0
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idP0> rdf:type owl:NamedIndividual,
+        :Proprietario ,
+        :Individuo ;
+    :nome "Abdulmalik" ;
+    :email "Abdulmalik@gmail.com" ;
+    :telefone "931123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP1
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idP1> rdf:type owl:NamedIndividual,
+        :Proprietario ,
+        :Individuo ;
+    :nome "Rui" ;
+    :email "Rui@gmail.com" ;
+    :telefone "931123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP2
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idP2> rdf:type owl:NamedIndividual,
+        :Proprietario ,
+        :Individuo ;
+    :nome "Luis" ;
+    :email "Luis@gmail.com" ;
+    :telefone "931123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP3
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idP3> rdf:type owl:NamedIndividual,
+        :Proprietario ,
+        :Individuo ;
+    :nome "Costa" ;
+    :email "Costa@gmail.com" ;
+    :telefone "931123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP4
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idP4> rdf:type owl:NamedIndividual,
+        :Proprietario ,
+        :Individuo ;
+    :nome "Ricardo" ;
+    :email "Ricardo@gmail.com" ;
+    :telefone "931123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA0
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idA0> rdf:type owl:NamedIndividual,
+        :Arrendatario ,
+        :Individuo ;
+    :nome "Filipa" ;
+    :email "Filipa@gmail.com" ;
+    :telefone "922123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA1
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idA1> rdf:type owl:NamedIndividual,
+        :Arrendatario ,
+        :Individuo ;
+    :nome "Valter" ;
+    :email "Valter@gmail.com" ;
+    :telefone "922123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA2
+<http://www.di.uminho.pt/prc2021/fichaprc2021#idA2> rdf:type owl:NamedIndividual,
+        :Arrendatario ,
+        :Individuo ;
+    :nome "Hugo" ;
+    :email "Hugo@gmail.com" ;
+    :telefone "922123123" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P1º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P1º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :1º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P2º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P2º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :2º_Dto ;
+    :Jan "Nao pagou" ;
+    :Fev "Nao pagou" ;
+    :Mar "Nao pagou" ;
+    :Abr "Nao pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P3º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P3º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :3º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Pagou" ;
+    :Jun "Pagou" ;
+    :Jul "Pagou" ;
+    :Ago "Pagou" ;
+    :Set "Pagou" ;
+    :Out "Pagou" ;
+    :Nov "Pagou" ;
+    :Dez "Pagou" ;
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P4º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P4º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :4º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Pagou" ;
+    :Jun "Pagou" ;
+    :Jul "Pagou" ;
+    :Ago "Pagou" ;
+    :Set "Pagou" ;
+    :Out "Pagou" ;
+    :Nov "Pagou" ;
+    :Dez "Pagou" ;
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P5º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P5º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :5º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Pagou" ;
+    :Jun "Pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P6º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P6º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :6º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Pagou" ;
+    :Jun "Pagou" ;
+    :Jul "Pagou" ;
+    :Ago "Pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P7º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P7º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :7º_Dto ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P8º_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P8º_Dto> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :8º_Dto ;
+    :Jan "Nao pagou" ;
+    :Fev "Nao pagou" ;
+    :Mar "Nao pagou" ;
+    :Abr "Nao pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P1º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P1º_Esq> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :1º_Esq ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Nao pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P3º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P3º_Esq> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :3º_Esq ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Nao pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P5º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P5º_Esq> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :5º_Esq ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#P7º_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#P7º_Esq> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :7º_Esq ;
+    :Jan "Pagou" ;
+    :Fev "Pagou" ;
+    :Mar "Pagou" ;
+    :Abr "Pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#PLoja
+<http://www.di.uminho.pt/prc2021/fichaprc2021#PLoja> rdf:type owl:NamedIndividual,
+        :PagamentosMes ;
+    :fracao :Loja ;
+    :Jan "Nao pagou" ;
+    :Fev "Nao pagou" ;
+    :Mar "Nao pagou" ;
+    :Abr "Nao pagou" ;
+    :Mai "Nao pagou" ;
+    :Jun "Nao pagou" ;
+    :Jul "Nao pagou" ;
+    :Ago "Nao pagou" ;
+    :Set "Nao pagou" ;
+    :Out "Nao pagou" ;
+    :Nov "Nao pagou" ;
+    :Dez "Nao pagou" .
