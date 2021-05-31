@@ -1,0 +1,72 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://prc.di.uminho.pt/2021/myfamily#>
+1)
+CONSTRUCT   
+{  
+    ?p1 :irmao ?p2.
+    ?p2 :irmao ?p1.
+} 
+WHERE 
+{ 
+  ?p1 :temProgenitor ?t1.
+  ?p2 :temProgenitor ?t1.
+  ?p1 :temProgenitor ?t2.
+  ?p2 :temProgenitor ?t2.
+  FILTER (?p1 != ?p2)
+  FILTER (?t1 != ?t2)
+}
+
+2)
+Construct{
+    ?b :bisavo ?a.
+   
+}
+Where {
+	?a :temProgenitor ?p.
+    ?p :temProgenitor ?v.
+    ?v :temProgenitor ?b.
+}
+
+3)
+CONSTRUCT { 
+    ?s :Descendentes ?d .
+} WHERE {
+    ?s :eProgenitorDe+ ?d.
+}
+
+4)
+CONSTRUCT 
+{  
+    ?p1 :primo ?p2.
+    ?p2 :primo ?p1.
+} 
+WHERE 
+{ 
+    ?p1 :temProgenitor ?t1.
+    ?p2 :temProgenitor ?t2.
+    ?t2 :temProgenitor ?pr.
+    ?t1 :temProgenitor ?pr.
+    FILTER (?p1 != ?p2)
+    FILTER (?t1 != ?t2)   
+}
+
+5)
+Construct{
+	?p :sexo "M".
+    ?m :sexo "F".
+   
+}
+Where {
+	?a :temPai ?p.
+    ?a :temMae ?m.
+}
+
+6)
+CONSTRUCT { 
+      ?s :relacionado ?o.
+      ?a :relacionado ?b.
+  } WHERE {
+      ?s :eProgenitorDe+ ?o.
+      ?a :temProgenitor+ ?b.
+  }

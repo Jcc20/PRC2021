@@ -9,6 +9,22 @@
 <http://www.di.uminho.pt/prc2021/fichaprc2021#> rdf:type owl:Ontology .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#descricao
+:descricao rdf:type owl:AnnotationProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#relativoA
+:relativoA rdf:type owl:AnnotationProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#setor
+:setor rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -109,6 +125,14 @@
 :Entrada rdf:type owl:Class .
 
 
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#EntradaLivro
+:EntradaLivro rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#EntradaMapa
+:EntradaMapa rdf:type owl:Class .
+
+
 ###  http://www.di.uminho.pt/prc2021/fichaprc2021#Fracao
 :Fracao rdf:type owl:Class .
 
@@ -125,211 +149,575 @@
 :Mapa rdf:type owl:Class .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#PagamentosMes
-:PagamentosMes rdf:type owl:Class .
-
-
 ###  http://www.di.uminho.pt/prc2021/fichaprc2021#Proprietario
 :Proprietario rdf:type owl:Class ;
               rdfs:subClassOf :Individuo .
+
 
 #################################################################
 #    Individuals
 #################################################################
 
-
-
 ###  http://www.di.uminho.pt/prc2021/fichaprc2021#Loja
-<http://www.di.uminho.pt/prc2021/fichaprc2021#Loja> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "50" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "6.06" .
+:Loja rdf:type owl:NamedIndividual ,
+               :Fracao ;
+      :mensalidade "6.06" ;
+      :permilagem "50" ;
+      :setor "A" .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#1_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#1_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "F" .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Esq
-<http://www.di.uminho.pt/prc2021/fichaprc2021#1º_Esq> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "34" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "51.63" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#1_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#1_Esq> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "51.63" ;
+                                                     :permilagem "34" ;
+                                                     :setor "G" .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#2º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#2º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "H" .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_001
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_001> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-04" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "7.28" ;
+                                                        :descricao "Manutenção da conta" ;
+                                                        :relativoA :CGD .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Esq
-<http://www.di.uminho.pt/prc2021/fichaprc2021#3º_Esq> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "34" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "51.63" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_002
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_002> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-06" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Janeiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#4º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#4º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_003
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_003> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-06" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "406.62" ;
+                                                        :descricao "Abril a Dezembro de 2019" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#2_Dto> .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_004
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_004> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-08" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "222.65" ;
+                                                        :descricao "Luz" ;
+                                                        :relativoA :EDP .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Esq
-<http://www.di.uminho.pt/prc2021/fichaprc2021#5º_Esq> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "34" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "51.63" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_005
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_005> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-16" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "45.18" ;
+                                                        :descricao "Janeiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#6º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#6º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_006
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_006> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-01" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "7.28" ;
+                                                        :descricao "Manutenção da conta" ;
+                                                        :relativoA :CGD .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_007
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_007> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-04" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Fevereiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq> .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Esq
-<http://www.di.uminho.pt/prc2021/fichaprc2021#7º_Esq> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "34" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "51.63" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_008
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_008> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-06" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Fevereiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#8º_Dto
-<http://www.di.uminho.pt/prc2021/fichaprc2021#8º_Dto> rdf:type owl:NamedIndividual,
-        :Fracao ;
-    :permilagem "24" ;
-    :proprietario :idA;
-    :estado "alugado";
-    :tipoImovel "Loja";
-    :mensalidade "36.45" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_009
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_009> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-01-20" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "439.77" ;
+                                                        :descricao "Manutenção dos elevadores: 1 trimestre" ;
+                                                        :relativoA :Kone .
 
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP0
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idP0> rdf:type owl:NamedIndividual,
-        :Proprietario ,
-        :Individuo ;
-    :nome "Abdulmalik" ;
-    :email "Abdulmalik@gmail.com" ;
-    :telefone "931123123" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_010
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_010> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-12" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "384.00" ;
+                                                        :descricao "Janeiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#1_Esq> .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP1
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idP1> rdf:type owl:NamedIndividual,
-        :Proprietario ,
-        :Individuo ;
-    :nome "Rui" ;
-    :email "Rui@gmail.com" ;
-    :telefone "931123123" .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP2
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idP2> rdf:type owl:NamedIndividual,
-        :Proprietario ,
-        :Individuo ;
-    :nome "Luis" ;
-    :email "Luis@gmail.com" ;
-    :telefone "931123123" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_011
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_011> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-20" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "45.18" ;
+                                                        :descricao "Fevereiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP3
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idP3> rdf:type owl:NamedIndividual,
-        :Proprietario ,
-        :Individuo ;
-    :nome "Costa" ;
-    :email "Costa@gmail.com" ;
-    :telefone "931123123" .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idP4
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idP4> rdf:type owl:NamedIndividual,
-        :Proprietario ,
-        :Individuo ;
-    :nome "Ricardo" ;
-    :email "Ricardo@gmail.com" ;
-    :telefone "931123123" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_012
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_012> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-24" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "20.00" ;
+                                                        :descricao "Concerto do trinco da porta" ;
+                                                        :relativoA :Serralheiro .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA0
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idA0> rdf:type owl:NamedIndividual,
-        :Arrendatario ,
-        :Individuo ;
-    :nome "Filipa" ;
-    :email "Filipa@gmail.com" ;
-    :telefone "922123123" .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA1
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idA1> rdf:type owl:NamedIndividual,
-        :Arrendatario ,
-        :Individuo ;
-    :nome "Valter" ;
-    :email "Valter@gmail.com" ;
-    :telefone "922123123" .
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_013
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_013> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-24" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "174.30" ;
+                                                        :descricao "Inspeção dos elevadores/" ;
+                                                        :relativoA :CMB .
 
-###  http://www.di.uminho.pt/prc2021/fichaprc2021#idA2
-<http://www.di.uminho.pt/prc2021/fichaprc2021#idA2> rdf:type owl:NamedIndividual,
-        :Arrendatario ,
-        :Individuo ;
-    :nome "Hugo" ;
-    :email "Hugo@gmail.com" ;
-    :telefone "922123123" .
 
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_014
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_014> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-24" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "194.30" ;
+                                                        :descricao "Acertos: Janeiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#1_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_015
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_015> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-11" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "271.08" ;
+                                                        :descricao "Janeiro a Junho" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_016
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_016> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-11" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "1655.00" ;
+                                                        :descricao "Reparação das fachadas" ;
+                                                        :relativoA :PluriRapel .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_017
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_017> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-26" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Março" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_018
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_018> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-29" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "542.16" ;
+                                                        :descricao "Janeiro a Dezembro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#3_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_019
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_019> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-04" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "236.59" ;
+                                                        :descricao "Luz" ;
+                                                        :relativoA :EDP .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_020
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_020> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-06" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Março" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_021
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_021> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-07" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "7.28" ;
+                                                        :descricao "Manutenção da conta" ;
+                                                        :relativoA :CGD .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_022
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_022> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-15" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "45.18" ;
+                                                        :descricao "Março" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_023
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_023> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-03-30" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Abril" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_024
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_024> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-04" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "7.28" ;
+                                                        :descricao "Manutenção da conta" ;
+                                                        :relativoA :CGD .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_025
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_025> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-06" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "64.00" ;
+                                                        :descricao "Abril" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_026
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_026> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-07" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "225.90" ;
+                                                        :descricao "Abril a Agosto" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#6_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_027
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_027> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-14" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "45.18" ;
+                                                        :descricao "Abril" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_028
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_028> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-15" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "207.98" ;
+                                                        :descricao "Luz Comum" ;
+                                                        :relativoA :Vizinhos .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_029
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_029> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-15" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "1080.00" ;
+                                                        :descricao "Limpeza 2020" ;
+                                                        :relativoA :Limpeza .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_030
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_030> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-15" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "542.16" ;
+                                                        :descricao "Janeiro a Dezembro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#4_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_031
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_031> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-04-01" ;
+                                                        :tipoEntrada "Despesa" ;
+                                                        :valor "439.77" ;
+                                                        :descricao "Manutenção dos elevadores: 2 trimestre" ;
+                                                        :relativoA :Kone .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_032
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_032> rdf:type owl:NamedIndividual ,
+                                                                 :EntradaLivro ;
+                                                        :data "2020-02-12" ;
+                                                        :tipoEntrada "Receita" ;
+                                                        :valor "384.00" ;
+                                                        :descricao "Janeiro" ;
+                                                        :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#3_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_1_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_1_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#1_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_1_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_1_Esq> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#1_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_2_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_2_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#2_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_3_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_3_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Ago" ,
+                                                               "Dez" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Jul" ,
+                                                               "Jun" ,
+                                                               "Mai" ,
+                                                               "Mar" ,
+                                                               "Nov" ,
+                                                               "Out" ,
+                                                               "Set" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#3_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_3_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_3_Esq> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#3_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_4_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_4_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Ago" ,
+                                                               "Dez" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Jul" ,
+                                                               "Jun" ,
+                                                               "Mai" ,
+                                                               "Mar" ,
+                                                               "Nov" ,
+                                                               "Out" ,
+                                                               "Set" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#4_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_5_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_5_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Jun" ,
+                                                               "Mai" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_5_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_5_Esq> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_6_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_6_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Ago" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Jul" ,
+                                                               "Jun" ,
+                                                               "Mai" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#6_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_7_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_7_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_7_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_7_Esq> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :mes "Abr" ,
+                                                               "Fev" ,
+                                                               "Jan" ,
+                                                               "Mar" ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_8_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_8_Dto> rdf:type owl:NamedIndividual ,
+                                                                   :EntradaMapa ;
+                                                          :relativoA <http://www.di.uminho.pt/prc2021/fichaprc2021#8_Dto> .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#2020_Loja
+<http://www.di.uminho.pt/prc2021/fichaprc2021#2020_Loja> rdf:type owl:NamedIndividual ,
+                                                                  :EntradaMapa ;
+                                                         :relativoA :Loja .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#3_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#3_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "I" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#3_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#3_Esq> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "51.63" ;
+                                                     :permilagem "34" ;
+                                                     :setor "J" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#4_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#4_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "L" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#5_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#5_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "M" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#5_Esq> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "51.63" ;
+                                                     :permilagem "34" ;
+                                                     :setor "N" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#6_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#6_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "O" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#7_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "P" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq
+<http://www.di.uminho.pt/prc2021/fichaprc2021#7_Esq> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "51.63" ;
+                                                     :permilagem "34" ;
+                                                     :setor "Q" .
+
+
+###  http://www.di.uminho.pt/prc2021/fichaprc2021#8_Dto
+<http://www.di.uminho.pt/prc2021/fichaprc2021#8_Dto> rdf:type owl:NamedIndividual ,
+                                                              :Fracao ;
+                                                     :mensalidade "36.45" ;
+                                                     :permilagem "24" ;
+                                                     :setor "R" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

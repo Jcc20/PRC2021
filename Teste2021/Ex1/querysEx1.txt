@@ -1,0 +1,58 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.di.uminho.pt/prc2021/EMD#>
+
+1)
+SELECT  (COUNT(?s) as ?NrExames)
+WHERE
+{
+  ?s rdf:type :EMD .
+}
+
+2)
+SELECT  (COUNT(?s) as ?NrExamesValidos)
+WHERE
+{
+  ?s rdf:type :EMD .
+  ?s :resultado "true".
+}
+
+3)
+SELECT ?g (COUNT(?s) as ?NrExames)
+WHERE
+{
+  ?s rdf:type :EMD .
+  ?s :paciente ?p.
+  ?p :genero ?g.
+}
+group by ?g
+
+4)
+SELECT ?m (COUNT(?s) as ?NrExames)
+WHERE
+{
+  ?s rdf:type :EMD .
+  ?s :paciente ?p.
+  ?p :pratica ?m.
+}
+group by ?m
+
+5)
+SELECT (COUNT(?p) as ?NrAtletas)
+WHERE
+{
+  ?s rdf:type :EMD .
+  ?s :paciente ?p.
+  ?p :federado "true".
+  ?p :jogaNo :GDGoma .
+}
+
+6)
+SELECT (COUNT(?p) as ?NrAtletas)
+WHERE
+{
+  ?s rdf:type :EMD .
+  ?s :paciente ?p.
+  ?p :genero "F".
+  ?p :pratica :Triatlo .
+}
+
